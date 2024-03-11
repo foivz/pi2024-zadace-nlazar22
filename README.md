@@ -4,7 +4,7 @@
 
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
-Ime i prezime | mojaadresa@foi.hr | 000000000 | githubuser
+Nikola Lazar  | nlazar22@foi.hr     | 0016161213 | nlazar22
 
 
 ## Opis domene
