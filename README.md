@@ -1,5 +1,7 @@
 # Naziv projekta
 
+Sustav upravljanja gradskim prijevozom putnika
+
 ## Podaci o studentu
 
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
