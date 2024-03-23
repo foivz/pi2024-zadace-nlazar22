@@ -1,6 +1,6 @@
 # Naziv projekta
 
-Sustav upravljanja gradskim prijevozom putnika
+CityLink - Digitalna transformacija autobusnog prijevoza u Varaždinu
 
 ## Podaci o studentu
 
@@ -10,12 +10,13 @@ Nikola Lazar  | nlazar22@foi.hr     | 0016161213 | nlazar22
 
 
 ## Opis domene
-Specifikacija softverskih zahtjeva za Sustav upravljanja gradskim prijevozom putnika opisuju potrebe i zahtjeve za digitalizacijom poslovnih procesa vezanih uz gradski prijevoz. Ovaj sustav, poznat kao "CityLink", zamjenjuje korištenje papira digitalnim rješenjem. Namijenjen je gradskom prijevozu unutar Varaždina te njegovoj okolici i obuhvaća širok spektar funkcionalnosti, uključujući stvaranje korisničkih računa, prikaz rasporeda vožnje, generiranje statističkih podataka o putovanjima, online prodaju karata, ažuriranje vremenskih rasporeda, izradu izvještaja o voznim redovima i pritužbama te analizu učestalosti i točnosti voznog parka.
+Izrada aplikacije "CityLink" je ključni korak za unapređenje kvalitete usluge autobusnog prijevoza u Varaždinu. Autobusi svakodnevno prevoze putnike po Varaždinu i okolici, osiguravajući da stignu na svoja odredišta na vrijeme, bilo da se radi o poslu, školi ili drugim obvezama. Kako bi se održala visoka razinu usluge, prelazi se na digitalno vođenje poslovnih procesa, koristeći tu aplikaciju. Ova aplikacija će omogućiti jednostavnije i efikasnije praćenje i upravljanje svim aspektima autobusnog prijevoza u Varaždinu.
 
 ## Specifikacija projekta
+Cilj projekta je modernizaciju sustava autobusnog prijevoza u Varaždinu s ciljem unapređenja korisničkog iskustva i optimizacije operativnih procesa. Glavni fokus projekta je implementacija aplikacije "CityLink" koja će omogućiti sveobuhvatno praćenje i upravljanje vozilima, stanicama, te linijama. Korištenje same aplikacije će rezultirati efikasnijim korištenjem resursa, preciznijim praćenjem voznog parka u stvarnom vremenu i pružanjem potrebnih informacija korisnicima usluge.
 
 ## Zadatak
-Razviti integriranu aplikaciju za digitalizaciju poslovnih procesa tvrtke za gradski prijevoz putnika.
+Razviti sustav upravljanja gradskim prijevozom putnika nazvan "CityLink", koji će digitalizirati poslovne procese vezane uz gradski prijevoz u Varaždinu i okolici.
 ## Resursi
 
 Svi resursi nalaze se u mapi _Documentation_.
