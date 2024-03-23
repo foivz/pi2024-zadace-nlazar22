@@ -1,6 +1,6 @@
 # Naziv projekta
 
-CityLink - Digitalna transformacija autobusnog prijevoza u Varaždinu
+CityLink - Unapređenje autobusnog prijevoza u Varaždinu kroz digitalnu transformaciju
 
 ## Podaci o studentu
 
