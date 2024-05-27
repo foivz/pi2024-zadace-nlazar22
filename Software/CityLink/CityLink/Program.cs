@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DBLayer;
 
 namespace CityLink
 {
@@ -14,6 +15,7 @@ namespace CityLink
         [STAThread]
         static void Main()
         {
+            DB.SetConfiguration("PI2324_nlazar22_DB", "PI2324_nlazar22_User", "p0:]s{jL");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
