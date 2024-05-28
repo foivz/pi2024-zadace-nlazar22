@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CityLink.Klase;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,10 +14,9 @@ namespace CityLink
 {
     public partial class FrmLogin : Form
     {
-        string username1 = "zaposlenik";
-        string username2 = "korisnik";
-        string lozinka1 = "test1";
-        string lozinka2 = "test2";
+        private Zaposlenik zaposlenik = new Zaposlenik();
+        private Korisnik korisnik = new Korisnik();
+
         public FrmLogin()
         {
             InitializeComponent();
@@ -38,7 +38,7 @@ namespace CityLink
             {
                 bool provjeraPrijave = false;
 
-                if (txtUsername.Text == username1 && txtPassword.Text == lozinka1)
+                if (txtUsername.Text == zaposlenik.Username && txtPassword.Text == zaposlenik.Password)
                 {
                     provjeraPrijave = true;
                     FrmAutobusneLinijeZaposlenik frmAutobusneLinijeZaposlenik = new FrmAutobusneLinijeZaposlenik();
@@ -46,7 +46,7 @@ namespace CityLink
                     frmAutobusneLinijeZaposlenik.ShowDialog();
                     Close();
                 }
-                else if (txtUsername.Text == username2 && txtPassword.Text == lozinka2)
+                else if (txtUsername.Text == korisnik.Username && txtPassword.Text == korisnik.Password)
                 {
                     provjeraPrijave = true;
                     FrmAutobusneLinijeKorisnik frmAutobusneLinijeKorisnik = new FrmAutobusneLinijeKorisnik();
