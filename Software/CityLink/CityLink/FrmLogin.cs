@@ -36,11 +36,10 @@ namespace CityLink
             }
             else
             {
-                bool provjeraPrijave = false;
-
                 if (txtUsername.Text == zaposlenik.Username && txtPassword.Text == zaposlenik.Password)
                 {
-                    provjeraPrijave = true;
+                    MessageBox.Show("Uspješno ste se prijavili!", "Prijava",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                     FrmAutobusneLinijeZaposlenik frmAutobusneLinijeZaposlenik = new FrmAutobusneLinijeZaposlenik();
                     Hide();
                     frmAutobusneLinijeZaposlenik.ShowDialog();
@@ -48,17 +47,12 @@ namespace CityLink
                 }
                 else if (txtUsername.Text == korisnik.Username && txtPassword.Text == korisnik.Password)
                 {
-                    provjeraPrijave = true;
+                    MessageBox.Show("Uspješno ste se prijavili!", "Prijava",
+                   MessageBoxButtons.OK, MessageBoxIcon.Information);
                     FrmAutobusneLinijeKorisnik frmAutobusneLinijeKorisnik = new FrmAutobusneLinijeKorisnik();
                     Hide();
                     frmAutobusneLinijeKorisnik.ShowDialog();
                     Close();
-                }
-
-                if (provjeraPrijave)
-                {
-                    MessageBox.Show("Uspješno ste se prijavili!", "Prijava",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
