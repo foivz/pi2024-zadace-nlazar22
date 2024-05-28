@@ -57,7 +57,7 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(357, 394);
+            this.btnLogout.Location = new System.Drawing.Point(358, 396);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(102, 35);
             this.btnLogout.TabIndex = 10;
@@ -85,10 +85,9 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(194, 68);
-            this.txtSearch.Multiline = true;
+            this.txtSearch.Location = new System.Drawing.Point(194, 70);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(180, 25);
+            this.txtSearch.Size = new System.Drawing.Size(180, 20);
             this.txtSearch.TabIndex = 13;
             // 
             // pI2324_nlazar22_DBDataSet

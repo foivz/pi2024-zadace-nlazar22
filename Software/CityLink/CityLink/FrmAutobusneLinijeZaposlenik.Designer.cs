@@ -58,7 +58,7 @@
             // 
             // btnDodajAutobusnuLiniju
             // 
-            this.btnDodajAutobusnuLiniju.Location = new System.Drawing.Point(145, 347);
+            this.btnDodajAutobusnuLiniju.Location = new System.Drawing.Point(145, 349);
             this.btnDodajAutobusnuLiniju.Name = "btnDodajAutobusnuLiniju";
             this.btnDodajAutobusnuLiniju.Size = new System.Drawing.Size(120, 35);
             this.btnDodajAutobusnuLiniju.TabIndex = 6;
@@ -68,7 +68,7 @@
             // 
             // btnObrisiAutobusnuLiniju
             // 
-            this.btnObrisiAutobusnuLiniju.Location = new System.Drawing.Point(347, 347);
+            this.btnObrisiAutobusnuLiniju.Location = new System.Drawing.Point(347, 349);
             this.btnObrisiAutobusnuLiniju.Name = "btnObrisiAutobusnuLiniju";
             this.btnObrisiAutobusnuLiniju.Size = new System.Drawing.Size(121, 35);
             this.btnObrisiAutobusnuLiniju.TabIndex = 7;
@@ -78,7 +78,7 @@
             // 
             // btnAzurirajAutobusnuLiniju
             // 
-            this.btnAzurirajAutobusnuLiniju.Location = new System.Drawing.Point(540, 347);
+            this.btnAzurirajAutobusnuLiniju.Location = new System.Drawing.Point(540, 349);
             this.btnAzurirajAutobusnuLiniju.Name = "btnAzurirajAutobusnuLiniju";
             this.btnAzurirajAutobusnuLiniju.Size = new System.Drawing.Size(126, 35);
             this.btnAzurirajAutobusnuLiniju.TabIndex = 8;
@@ -88,7 +88,7 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(358, 392);
+            this.btnLogout.Location = new System.Drawing.Point(357, 394);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(102, 35);
             this.btnLogout.TabIndex = 9;
@@ -99,15 +99,14 @@
             // txtSearch
             // 
             this.txtSearch.Location = new System.Drawing.Point(194, 68);
-            this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(180, 25);
+            this.txtSearch.Size = new System.Drawing.Size(180, 20);
             this.txtSearch.TabIndex = 10;
             // 
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(67, 73);
+            this.lblSearch.Location = new System.Drawing.Point(67, 71);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(121, 13);
             this.lblSearch.TabIndex = 11;
@@ -115,7 +114,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(402, 65);
+            this.btnSearch.Location = new System.Drawing.Point(402, 63);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(93, 32);
             this.btnSearch.TabIndex = 12;
