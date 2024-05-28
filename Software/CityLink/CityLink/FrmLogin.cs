@@ -41,10 +41,18 @@ namespace CityLink
                 if (txtUsername.Text == username1 && txtPassword.Text == lozinka1)
                 {
                     provjeraPrijave = true;
+                    FrmAutobusneLinijeZaposlenik frmAutobusneLinijeZaposlenik = new FrmAutobusneLinijeZaposlenik();
+                    Hide();
+                    frmAutobusneLinijeZaposlenik.ShowDialog();
+                    Close();
                 }
                 else if (txtUsername.Text == username2 && txtPassword.Text == lozinka2)
                 {
                     provjeraPrijave = true;
+                    FrmAutobusneLinijeKorisnik frmAutobusneLinijeKorisnik = new FrmAutobusneLinijeKorisnik();
+                    Hide();
+                    frmAutobusneLinijeKorisnik.ShowDialog();
+                    Close();
                 }
 
                 if (provjeraPrijave)

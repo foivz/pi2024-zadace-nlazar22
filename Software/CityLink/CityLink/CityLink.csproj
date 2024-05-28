@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAutobusneLinijeKorisnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAutobusneLinijeKorisnik.Designer.cs">
+      <DependentUpon>FrmAutobusneLinijeKorisnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAutobusneLinijeZaposlenik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAutobusneLinijeZaposlenik.Designer.cs">
+      <DependentUpon>FrmAutobusneLinijeZaposlenik.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +66,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAutobusneLinijeKorisnik.resx">
+      <DependentUpon>FrmAutobusneLinijeKorisnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAutobusneLinijeZaposlenik.resx">
+      <DependentUpon>FrmAutobusneLinijeZaposlenik.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
