@@ -16,5 +16,23 @@ namespace CityLink
         {
             InitializeComponent();
         }
+
+        private void btnDodajAutobusnuLiniju_Click(object sender, EventArgs e)
+        {
+            FrmDodavanjeAutobusneLinije frmDodavanjeAutobusneLinije = new FrmDodavanjeAutobusneLinije();
+            frmDodavanjeAutobusneLinije.ShowDialog();
+        }
+
+        private void btnObrisiAutobusnuLiniju_Click(object sender, EventArgs e)
+        {
+            FrmBrisanjeAutobusneLinije frmBrisanjeAutobusneLinije = new FrmBrisanjeAutobusneLinije();
+            frmBrisanjeAutobusneLinije.ShowDialog();
+        }
+
+        private void btnAzurirajAutobusnuLiniju_Click(object sender, EventArgs e)
+        {
+            FrmAzuriranjeAutobusneLinije frmAzuriranjeAutobusneLinije = new FrmAzuriranjeAutobusneLinije();
+            frmAzuriranjeAutobusneLinije.ShowDialog();
+        }
     }
 }

@@ -29,25 +29,65 @@
         private void InitializeComponent()
         {
             this.label3 = new System.Windows.Forms.Label();
+            this.btnDodajAutobusnuLiniju = new System.Windows.Forms.Button();
+            this.btnObrisiAutobusnuLiniju = new System.Windows.Forms.Button();
+            this.btnAzurirajAutobusnuLiniju = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(340, 9);
+            this.label3.Location = new System.Drawing.Point(342, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 33);
             this.label3.TabIndex = 5;
             this.label3.Text = "CityLink";
+            // 
+            // btnDodajAutobusnuLiniju
+            // 
+            this.btnDodajAutobusnuLiniju.Location = new System.Drawing.Point(145, 333);
+            this.btnDodajAutobusnuLiniju.Name = "btnDodajAutobusnuLiniju";
+            this.btnDodajAutobusnuLiniju.Size = new System.Drawing.Size(120, 35);
+            this.btnDodajAutobusnuLiniju.TabIndex = 6;
+            this.btnDodajAutobusnuLiniju.Text = "Dodaj autobusnu liniju";
+            this.btnDodajAutobusnuLiniju.UseVisualStyleBackColor = true;
+            this.btnDodajAutobusnuLiniju.Click += new System.EventHandler(this.btnDodajAutobusnuLiniju_Click);
+            // 
+            // btnObrisiAutobusnuLiniju
+            // 
+            this.btnObrisiAutobusnuLiniju.Location = new System.Drawing.Point(347, 333);
+            this.btnObrisiAutobusnuLiniju.Name = "btnObrisiAutobusnuLiniju";
+            this.btnObrisiAutobusnuLiniju.Size = new System.Drawing.Size(121, 35);
+            this.btnObrisiAutobusnuLiniju.TabIndex = 7;
+            this.btnObrisiAutobusnuLiniju.Text = "Obriši autobusnu liniju";
+            this.btnObrisiAutobusnuLiniju.UseVisualStyleBackColor = true;
+            this.btnObrisiAutobusnuLiniju.Click += new System.EventHandler(this.btnObrisiAutobusnuLiniju_Click);
+            // 
+            // btnAzurirajAutobusnuLiniju
+            // 
+            this.btnAzurirajAutobusnuLiniju.Location = new System.Drawing.Point(540, 333);
+            this.btnAzurirajAutobusnuLiniju.Name = "btnAzurirajAutobusnuLiniju";
+            this.btnAzurirajAutobusnuLiniju.Size = new System.Drawing.Size(126, 35);
+            this.btnAzurirajAutobusnuLiniju.TabIndex = 8;
+            this.btnAzurirajAutobusnuLiniju.Text = "Ažuriraj autobusnu liniju";
+            this.btnAzurirajAutobusnuLiniju.UseVisualStyleBackColor = true;
+            this.btnAzurirajAutobusnuLiniju.Click += new System.EventHandler(this.btnAzurirajAutobusnuLiniju_Click);
             // 
             // FrmAutobusneLinijeZaposlenik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAzurirajAutobusnuLiniju);
+            this.Controls.Add(this.btnObrisiAutobusnuLiniju);
+            this.Controls.Add(this.btnDodajAutobusnuLiniju);
             this.Controls.Add(this.label3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmAutobusneLinijeZaposlenik";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Autobusne linije";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -57,5 +97,8 @@
         #endregion
 
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnDodajAutobusnuLiniju;
+        private System.Windows.Forms.Button btnObrisiAutobusnuLiniju;
+        private System.Windows.Forms.Button btnAzurirajAutobusnuLiniju;
     }
 }
