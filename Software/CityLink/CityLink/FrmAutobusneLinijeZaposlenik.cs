@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CityLink.Klase;
+using CityLink.Repozitoriji;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DBLayer;
 
 namespace CityLink
 {
@@ -42,6 +45,23 @@ namespace CityLink
             FrmLogin frmLogin = new FrmLogin();
             frmLogin.ShowDialog();
             Close();
+        }
+
+        private void ShowAutobusneLinije()
+        {
+            List<AutobusnaLinija> autobusneLinije = AutobusneLinijeRepozitorij.GetAutobusneLinije();
+            dgvPrikazZaposlenik.DataSource = autobusneLinije;
+            dgvPrikazZaposlenik.Columns["LinijaId"].DisplayIndex = 0;
+            dgvPrikazZaposlenik.Columns["MjestoPolaska"].DisplayIndex = 1;
+            dgvPrikazZaposlenik.Columns["MjestoDolaska"].DisplayIndex = 2;
+            dgvPrikazZaposlenik.Columns["VrijemePolaska"].DisplayIndex = 3;
+            dgvPrikazZaposlenik.Columns["VrijemeDolaska"].DisplayIndex = 4;
+            dgvPrikazZaposlenik.Columns["BrojStanica"].DisplayIndex = 5;
+        }
+
+        private void FrmAutobusneLinijeZaposlenik_Load(object sender, EventArgs e)
+        {
+            ShowAutobusneLinije();
         }
     }
 }

@@ -28,11 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label3 = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.lblSearch = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.pI2324_nlazar22_DBDataSet = new CityLink.PI2324_nlazar22_DBDataSet();
+            this.pI2324nlazar22DBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.autobusneLinijeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.autobusneLinijeTableAdapter = new CityLink.PI2324_nlazar22_DBDataSetTableAdapters.AutobusneLinijeTableAdapter();
+            this.dgvPrikazKorisnik = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.pI2324_nlazar22_DBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pI2324nlazar22DBDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autobusneLinijeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPrikazKorisnik)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -47,7 +57,7 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(358, 394);
+            this.btnLogout.Location = new System.Drawing.Point(357, 394);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(102, 35);
             this.btnLogout.TabIndex = 10;
@@ -81,11 +91,42 @@
             this.txtSearch.Size = new System.Drawing.Size(180, 25);
             this.txtSearch.TabIndex = 13;
             // 
+            // pI2324_nlazar22_DBDataSet
+            // 
+            this.pI2324_nlazar22_DBDataSet.DataSetName = "PI2324_nlazar22_DBDataSet";
+            this.pI2324_nlazar22_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pI2324nlazar22DBDataSetBindingSource
+            // 
+            this.pI2324nlazar22DBDataSetBindingSource.DataSource = this.pI2324_nlazar22_DBDataSet;
+            this.pI2324nlazar22DBDataSetBindingSource.Position = 0;
+            // 
+            // autobusneLinijeBindingSource
+            // 
+            this.autobusneLinijeBindingSource.DataMember = "AutobusneLinije";
+            this.autobusneLinijeBindingSource.DataSource = this.pI2324nlazar22DBDataSetBindingSource;
+            // 
+            // autobusneLinijeTableAdapter
+            // 
+            this.autobusneLinijeTableAdapter.ClearBeforeFill = true;
+            // 
+            // dgvPrikazKorisnik
+            // 
+            this.dgvPrikazKorisnik.AllowUserToAddRows = false;
+            this.dgvPrikazKorisnik.AllowUserToDeleteRows = false;
+            this.dgvPrikazKorisnik.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPrikazKorisnik.Location = new System.Drawing.Point(73, 113);
+            this.dgvPrikazKorisnik.Name = "dgvPrikazKorisnik";
+            this.dgvPrikazKorisnik.ReadOnly = true;
+            this.dgvPrikazKorisnik.Size = new System.Drawing.Size(644, 265);
+            this.dgvPrikazKorisnik.TabIndex = 16;
+            // 
             // FrmAutobusneLinijeKorisnik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvPrikazKorisnik);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.txtSearch);
@@ -96,6 +137,11 @@
             this.Name = "FrmAutobusneLinijeKorisnik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Autobusne linije";
+            this.Load += new System.EventHandler(this.FrmAutobusneLinijeKorisnik_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pI2324_nlazar22_DBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pI2324nlazar22DBDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autobusneLinijeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPrikazKorisnik)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,5 +154,10 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.BindingSource pI2324nlazar22DBDataSetBindingSource;
+        private PI2324_nlazar22_DBDataSet pI2324_nlazar22_DBDataSet;
+        private System.Windows.Forms.BindingSource autobusneLinijeBindingSource;
+        private PI2324_nlazar22_DBDataSetTableAdapters.AutobusneLinijeTableAdapter autobusneLinijeTableAdapter;
+        private System.Windows.Forms.DataGridView dgvPrikazKorisnik;
     }
 }

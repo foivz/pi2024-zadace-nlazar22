@@ -35,7 +35,7 @@
             this.lblVrijemePolaska = new System.Windows.Forms.Label();
             this.lblVrijemeDolaska = new System.Windows.Forms.Label();
             this.lblBrojStanica = new System.Windows.Forms.Label();
-            this.txtLinijaID = new System.Windows.Forms.TextBox();
+            this.txtLinijaId = new System.Windows.Forms.TextBox();
             this.txtMjestoPolaska = new System.Windows.Forms.TextBox();
             this.txtMjestoDolaska = new System.Windows.Forms.TextBox();
             this.txtVrijemePolaska = new System.Windows.Forms.TextBox();
@@ -108,12 +108,12 @@
             this.lblBrojStanica.TabIndex = 12;
             this.lblBrojStanica.Text = "Broj stanica:";
             // 
-            // txtLinijaID
+            // txtLinijaId
             // 
-            this.txtLinijaID.Location = new System.Drawing.Point(202, 62);
-            this.txtLinijaID.Name = "txtLinijaID";
-            this.txtLinijaID.Size = new System.Drawing.Size(47, 20);
-            this.txtLinijaID.TabIndex = 13;
+            this.txtLinijaId.Location = new System.Drawing.Point(202, 62);
+            this.txtLinijaId.Name = "txtLinijaId";
+            this.txtLinijaId.Size = new System.Drawing.Size(47, 20);
+            this.txtLinijaId.TabIndex = 13;
             // 
             // txtMjestoPolaska
             // 
@@ -158,6 +158,7 @@
             this.btnDodaj.TabIndex = 19;
             this.btnDodaj.Text = "Dodaj";
             this.btnDodaj.UseVisualStyleBackColor = true;
+            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
             // 
             // FrmDodavanjeAutobusneLinije
             // 
@@ -170,7 +171,7 @@
             this.Controls.Add(this.txtVrijemePolaska);
             this.Controls.Add(this.txtMjestoDolaska);
             this.Controls.Add(this.txtMjestoPolaska);
-            this.Controls.Add(this.txtLinijaID);
+            this.Controls.Add(this.txtLinijaId);
             this.Controls.Add(this.lblBrojStanica);
             this.Controls.Add(this.lblVrijemeDolaska);
             this.Controls.Add(this.lblVrijemePolaska);
@@ -198,7 +199,7 @@
         private System.Windows.Forms.Label lblVrijemePolaska;
         private System.Windows.Forms.Label lblVrijemeDolaska;
         private System.Windows.Forms.Label lblBrojStanica;
-        private System.Windows.Forms.TextBox txtLinijaID;
+        private System.Windows.Forms.TextBox txtLinijaId;
         private System.Windows.Forms.TextBox txtMjestoPolaska;
         private System.Windows.Forms.TextBox txtMjestoDolaska;
         private System.Windows.Forms.TextBox txtVrijemePolaska;

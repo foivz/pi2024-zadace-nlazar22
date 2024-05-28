@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CityLink.Klase;
+using CityLink.Repozitoriji;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,11 @@ namespace CityLink
         public FrmDodavanjeAutobusneLinije()
         {
             InitializeComponent();
+        }
+
+        private void btnDodaj_Click(object sender, EventArgs e)
+        {
+            //DodajAutobusnuLiniju();
         }
     }
 }

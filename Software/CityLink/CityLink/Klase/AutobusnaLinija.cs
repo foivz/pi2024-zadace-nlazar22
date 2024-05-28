@@ -14,5 +14,15 @@ namespace CityLink.Klase
         public string VrijemePolaska { get; set; }
         public string VrijemeDolaska { get; set; }
         public int BrojStanica { get; set; }
+
+        public AutobusnaLinija(int id, string mPolaska, string mDolaska, string vPolaska, string vDolaska, int brStanica)
+        {
+            LinijaId = id;
+            MjestoPolaska = mPolaska;
+            MjestoDolaska = mDolaska;
+            VrijemePolaska = vPolaska;
+            VrijemeDolaska = vDolaska;
+            BrojStanica = brStanica;
+        }
     }
 }
