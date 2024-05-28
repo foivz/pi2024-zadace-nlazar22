@@ -57,7 +57,7 @@ namespace CityLink
 
                 if (provjeraPrijave)
                 {
-                    MessageBox.Show("Uspješno ste se prijavili!", "Prijavljeni ste",
+                    MessageBox.Show("Uspješno ste se prijavili!", "Prijava",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
