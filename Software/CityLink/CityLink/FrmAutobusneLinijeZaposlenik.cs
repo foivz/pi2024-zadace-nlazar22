@@ -34,7 +34,7 @@ namespace CityLink
 
         private void btnAzurirajAutobusnuLiniju_Click(object sender, EventArgs e)
         {
-            FrmAzuriranjeAutobusneLinije frmAzuriranjeAutobusneLinije = new FrmAzuriranjeAutobusneLinije();
+            FrmAzuriranjeAutobusneLinije frmAzuriranjeAutobusneLinije = new FrmAzuriranjeAutobusneLinije(this);
             frmAzuriranjeAutobusneLinije.ShowDialog();
         }
 

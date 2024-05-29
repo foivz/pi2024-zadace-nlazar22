@@ -29,7 +29,7 @@ namespace CityLink
         {
             if (!int.TryParse(txtLinijaId.Text, out int linijaId))
             {
-                MessageBox.Show("Unesite valjanu numeričku vrijednost za ID linije.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Unesite valjanu numeričku vrijednost za ID linije.", "Pogreška", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

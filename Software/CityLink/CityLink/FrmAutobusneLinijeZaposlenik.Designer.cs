@@ -140,7 +140,7 @@
             this.dgvPrikazZaposlenik.AllowUserToAddRows = false;
             this.dgvPrikazZaposlenik.AllowUserToDeleteRows = false;
             this.dgvPrikazZaposlenik.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPrikazZaposlenik.Location = new System.Drawing.Point(76, 103);
+            this.dgvPrikazZaposlenik.Location = new System.Drawing.Point(78, 103);
             this.dgvPrikazZaposlenik.Name = "dgvPrikazZaposlenik";
             this.dgvPrikazZaposlenik.ReadOnly = true;
             this.dgvPrikazZaposlenik.Size = new System.Drawing.Size(643, 234);

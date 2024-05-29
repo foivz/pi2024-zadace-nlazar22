@@ -35,7 +35,7 @@
             this.txtVrijemePolaska = new System.Windows.Forms.TextBox();
             this.txtMjestoDolaska = new System.Windows.Forms.TextBox();
             this.txtMjestoPolaska = new System.Windows.Forms.TextBox();
-            this.txtLinijaID = new System.Windows.Forms.TextBox();
+            this.txtLinijaId = new System.Windows.Forms.TextBox();
             this.lblBrojStanica = new System.Windows.Forms.Label();
             this.lblVrijemeDolaska = new System.Windows.Forms.Label();
             this.lblVrijemePolaska = new System.Windows.Forms.Label();
@@ -62,6 +62,7 @@
             this.btnAzuriraj.TabIndex = 32;
             this.btnAzuriraj.Text = "Ažuriraj";
             this.btnAzuriraj.UseVisualStyleBackColor = true;
+            this.btnAzuriraj.Click += new System.EventHandler(this.btnAzuriraj_Click);
             // 
             // txtBrojStanica
             // 
@@ -98,12 +99,12 @@
             this.txtMjestoPolaska.Size = new System.Drawing.Size(107, 20);
             this.txtMjestoPolaska.TabIndex = 27;
             // 
-            // txtLinijaID
+            // txtLinijaId
             // 
-            this.txtLinijaID.Location = new System.Drawing.Point(203, 62);
-            this.txtLinijaID.Name = "txtLinijaID";
-            this.txtLinijaID.Size = new System.Drawing.Size(47, 20);
-            this.txtLinijaID.TabIndex = 26;
+            this.txtLinijaId.Location = new System.Drawing.Point(203, 62);
+            this.txtLinijaId.Name = "txtLinijaId";
+            this.txtLinijaId.Size = new System.Drawing.Size(47, 20);
+            this.txtLinijaId.TabIndex = 26;
             // 
             // lblBrojStanica
             // 
@@ -170,7 +171,7 @@
             this.Controls.Add(this.txtVrijemePolaska);
             this.Controls.Add(this.txtMjestoDolaska);
             this.Controls.Add(this.txtMjestoPolaska);
-            this.Controls.Add(this.txtLinijaID);
+            this.Controls.Add(this.txtLinijaId);
             this.Controls.Add(this.lblBrojStanica);
             this.Controls.Add(this.lblVrijemeDolaska);
             this.Controls.Add(this.lblVrijemePolaska);
@@ -198,7 +199,7 @@
         private System.Windows.Forms.TextBox txtVrijemePolaska;
         private System.Windows.Forms.TextBox txtMjestoDolaska;
         private System.Windows.Forms.TextBox txtMjestoPolaska;
-        private System.Windows.Forms.TextBox txtLinijaID;
+        private System.Windows.Forms.TextBox txtLinijaId;
         private System.Windows.Forms.Label lblBrojStanica;
         private System.Windows.Forms.Label lblVrijemeDolaska;
         private System.Windows.Forms.Label lblVrijemePolaska;

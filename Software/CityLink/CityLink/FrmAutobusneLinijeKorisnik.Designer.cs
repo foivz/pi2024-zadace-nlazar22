@@ -114,7 +114,7 @@
             this.dgvPrikazKorisnik.AllowUserToAddRows = false;
             this.dgvPrikazKorisnik.AllowUserToDeleteRows = false;
             this.dgvPrikazKorisnik.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPrikazKorisnik.Location = new System.Drawing.Point(73, 113);
+            this.dgvPrikazKorisnik.Location = new System.Drawing.Point(75, 113);
             this.dgvPrikazKorisnik.Name = "dgvPrikazKorisnik";
             this.dgvPrikazKorisnik.ReadOnly = true;
             this.dgvPrikazKorisnik.Size = new System.Drawing.Size(644, 265);

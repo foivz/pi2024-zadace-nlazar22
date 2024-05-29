@@ -25,11 +25,21 @@ namespace CityLink
 
         private void btnDodaj_Click(object sender, EventArgs e)
         {
-            DodajAutobusnuLiniju();
-        }
+            if (!int.TryParse(txtLinijaId.Text, out int linijaId))
+            {
+                MessageBox.Show("Neispravan format za LinijaId!", "Pogreška",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-        private void DodajAutobusnuLiniju()
-        {
+            if (AutobusneLinijeRepozitorij.PostojiAutobusnaLinijaSaId(linijaId))
+            {
+                MessageBox.Show("Linija sa istim ID već postoji!", "Pogreška",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
             if (string.IsNullOrWhiteSpace(txtLinijaId.Text) || string.IsNullOrWhiteSpace(txtMjestoPolaska.Text) ||
                 string.IsNullOrWhiteSpace(txtMjestoDolaska.Text) || string.IsNullOrWhiteSpace(txtVrijemePolaska.Text) ||
                 string.IsNullOrWhiteSpace(txtVrijemeDolaska.Text) || string.IsNullOrWhiteSpace(txtBrojStanica.Text))
@@ -39,23 +49,9 @@ namespace CityLink
                 return;
             }
 
-            if (!int.TryParse(txtLinijaId.Text, out int linijaId))
-            {
-                MessageBox.Show("Neispravan format za LinijaId!", "Pogreška",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
             if (!int.TryParse(txtBrojStanica.Text, out int brojStanica))
             {
                 MessageBox.Show("Neispravan format za Broj Stanica!", "Pogreška",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; 
-            }
-
-            if (AutobusneLinijeRepozitorij.PostojiAutobusnaLinijaSaId(linijaId))
-            {
-                MessageBox.Show("Linija sa istim ID već postoji!", "Pogreška",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -67,6 +63,9 @@ namespace CityLink
 
             AutobusnaLinija novaLinija = new AutobusnaLinija(linijaId, mjestoPolaska, mjestoDolaska, vrijemePolaska, vrijemeDolaska, brojStanica);
             AutobusneLinijeRepozitorij.DodajAutobusnuLiniju(novaLinija);
+
+            MessageBox.Show("Uspješno ste dodali novu liniju!", "Dodavanje linije",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             _frmAutobusneLinijeZaposlenik.ShowAutobusneLinije();
 
