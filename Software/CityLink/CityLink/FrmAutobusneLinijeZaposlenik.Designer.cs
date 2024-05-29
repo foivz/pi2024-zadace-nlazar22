@@ -120,6 +120,7 @@
             this.btnSearch.TabIndex = 12;
             this.btnSearch.Text = "Traži";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // autobusneLinijeBindingSource
             // 

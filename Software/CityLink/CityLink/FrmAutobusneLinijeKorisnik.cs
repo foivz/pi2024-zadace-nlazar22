@@ -46,5 +46,22 @@ namespace CityLink
         {
             ShowAutobusneLinije();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string searchQuery = txtSearch.Text.Trim(); 
+
+            List<AutobusnaLinija> sveLinije = AutobusneLinijeRepozitorij.GetAutobusneLinije();
+
+            
+            List<AutobusnaLinija> filtriraneLinije = sveLinije.Where(linija =>
+                linija.MjestoPolaska.IndexOf(searchQuery, StringComparison.OrdinalIgnoreCase) != -1 ||
+                linija.MjestoDolaska.IndexOf(searchQuery, StringComparison.OrdinalIgnoreCase) != -1
+            ).ToList();
+
+            
+            dgvPrikazKorisnik.DataSource = filtriraneLinije;
+        }
+
     }
 }

@@ -63,5 +63,21 @@ namespace CityLink
         {
             ShowAutobusneLinije();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string pretrazivanje = txtSearch.Text.Trim();
+
+            List<AutobusnaLinija> sveLinije = AutobusneLinijeRepozitorij.GetAutobusneLinije();
+
+
+            List<AutobusnaLinija> filtriraneLinije = sveLinije.Where(linija =>
+                linija.MjestoPolaska.IndexOf(pretrazivanje, StringComparison.OrdinalIgnoreCase) != -1 ||
+                linija.MjestoDolaska.IndexOf(pretrazivanje, StringComparison.OrdinalIgnoreCase) != -1
+            ).ToList();
+
+
+            dgvPrikazZaposlenik.DataSource = filtriraneLinije;
+        }
     }
 }
