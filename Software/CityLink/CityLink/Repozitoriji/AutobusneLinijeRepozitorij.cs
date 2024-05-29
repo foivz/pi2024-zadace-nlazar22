@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CityLink.Klase;
@@ -46,7 +47,7 @@ namespace CityLink.Repozitoriji
         {
             if (!PostojiAutobusnaLinijaSaId(linijaId))
             {
-                MessageBox.Show("Autobusna linija s navedenim ID-om ne postoji.", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Autobusna linija s navedenim ID-om ne postoji.", "Pogreška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -68,6 +69,15 @@ namespace CityLink.Repozitoriji
             DB.CloseConnection();
 
             MessageBox.Show("Autobusna linija je uspješno ažurirana.", "Ažuriranje linije", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public static bool ProvjeriFormatVremena(string vrijeme)
+        {
+            if (!Regex.IsMatch(vrijeme, @"^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$"))
+            {
+                return false; 
+            }
+            return true; 
         }
 
         private static AutobusnaLinija CreateObject(SqlDataReader reader)

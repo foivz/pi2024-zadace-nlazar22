@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace CityLink
 {
@@ -44,6 +45,21 @@ namespace CityLink
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            if (!AutobusneLinijeRepozitorij.ProvjeriFormatVremena(txtVrijemePolaska.Text))
+            {
+                MessageBox.Show("Neispravan format za Vrijeme Polaska! Format mora biti u obliku HH:MM.", "Pogreška",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!AutobusneLinijeRepozitorij.ProvjeriFormatVremena(txtVrijemeDolaska.Text))
+            {
+                MessageBox.Show("Neispravan format za Vrijeme Dolaska! Format mora biti u obliku HH:MM.", "Pogreška",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
 
             if (!int.TryParse(txtBrojStanica.Text, out int brojStanica))
             {
