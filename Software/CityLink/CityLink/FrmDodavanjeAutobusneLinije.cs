@@ -22,20 +22,41 @@ namespace CityLink
         private void btnDodaj_Click(object sender, EventArgs e)
         {
             DodajAutobusnuLiniju();
-            Close();
         }
 
         private void DodajAutobusnuLiniju()
         {
-            int linijaId = int.Parse(txtLinijaId.Text);
+            if (string.IsNullOrWhiteSpace(txtLinijaId.Text) || string.IsNullOrWhiteSpace(txtMjestoPolaska.Text) ||
+                string.IsNullOrWhiteSpace(txtMjestoDolaska.Text) || string.IsNullOrWhiteSpace(txtVrijemePolaska.Text) ||
+                string.IsNullOrWhiteSpace(txtVrijemeDolaska.Text) || string.IsNullOrWhiteSpace(txtBrojStanica.Text))
+            {
+                MessageBox.Show("Morate ispuniti sve podatke!", "Pogreška",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(txtLinijaId.Text, out int linijaId))
+            {
+                MessageBox.Show("Neispravan format za LinijaId!", "Pogreška",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(txtBrojStanica.Text, out int brojStanica))
+            {
+                MessageBox.Show("Neispravan format za Broj Stanica!", "Pogreška",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             string mjestoPolaska = txtMjestoPolaska.Text;
             string mjestoDolaska = txtMjestoDolaska.Text;
             string vrijemePolaska = txtVrijemePolaska.Text;
             string vrijemeDolaska = txtVrijemeDolaska.Text;
-            int brojStanica = int.Parse(txtBrojStanica.Text);
 
             AutobusnaLinija novaLinija = new AutobusnaLinija(linijaId, mjestoPolaska, mjestoDolaska, vrijemePolaska, vrijemeDolaska, brojStanica);
             AutobusneLinijeRepozitorij.DodajAutobusnuLiniju(novaLinija);
         }
+
     }
 }
