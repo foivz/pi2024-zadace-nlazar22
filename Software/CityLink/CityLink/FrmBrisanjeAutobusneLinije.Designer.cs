@@ -32,6 +32,7 @@
             this.lblLinijaID = new System.Windows.Forms.Label();
             this.txtLinijaId = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnOdustani = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -62,7 +63,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(96, 152);
+            this.btnDelete.Location = new System.Drawing.Point(96, 149);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(107, 35);
             this.btnDelete.TabIndex = 8;
@@ -70,11 +71,22 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // btnOdustani
+            // 
+            this.btnOdustani.Location = new System.Drawing.Point(96, 196);
+            this.btnOdustani.Name = "btnOdustani";
+            this.btnOdustani.Size = new System.Drawing.Size(107, 35);
+            this.btnOdustani.TabIndex = 9;
+            this.btnOdustani.Text = "Odustani";
+            this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
+            // 
             // FrmBrisanjeAutobusneLinije
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(297, 245);
+            this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.txtLinijaId);
             this.Controls.Add(this.lblLinijaID);
@@ -96,5 +108,6 @@
         private System.Windows.Forms.Label lblLinijaID;
         private System.Windows.Forms.TextBox txtLinijaId;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnOdustani;
     }
 }

@@ -38,5 +38,10 @@ namespace CityLink
             _frmAutobusneLinijeZaposlenik.ShowAutobusneLinije();
             Close();
         }
+
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -49,18 +49,24 @@ namespace CityLink
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string searchQuery = txtSearch.Text.Trim(); 
+            string pretrazivanje = txtSearch.Text.Trim();
 
-            List<AutobusnaLinija> sveLinije = AutobusneLinijeRepozitorij.GetAutobusneLinije();
+            if (string.IsNullOrEmpty(pretrazivanje))
+            {
+                ShowAutobusneLinije();
+                return;
+            }
 
-            
-            List<AutobusnaLinija> filtriraneLinije = sveLinije.Where(linija =>
-                linija.MjestoPolaska.IndexOf(searchQuery, StringComparison.OrdinalIgnoreCase) != -1 ||
-                linija.MjestoDolaska.IndexOf(searchQuery, StringComparison.OrdinalIgnoreCase) != -1
-            ).ToList();
+            List<AutobusnaLinija> rezultatiPretrage = AutobusneLinijeRepozitorij.PretraziAutobusneLinije(pretrazivanje);
 
-            
-            dgvPrikazKorisnik.DataSource = filtriraneLinije;
+            if (rezultatiPretrage.Count == 0)
+            {
+                MessageBox.Show("Nema rezultata za navedeni kriterij pretrage.", "Obavijest", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                dgvPrikazKorisnik.DataSource = rezultatiPretrage;
+            }
         }
 
     }

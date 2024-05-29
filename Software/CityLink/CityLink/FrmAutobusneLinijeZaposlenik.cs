@@ -68,16 +68,22 @@ namespace CityLink
         {
             string pretrazivanje = txtSearch.Text.Trim();
 
-            List<AutobusnaLinija> sveLinije = AutobusneLinijeRepozitorij.GetAutobusneLinije();
+            if (string.IsNullOrEmpty(pretrazivanje))
+            {
+                ShowAutobusneLinije();
+                return;
+            }
 
+            List<AutobusnaLinija> rezultatiPretrage = AutobusneLinijeRepozitorij.PretraziAutobusneLinije(pretrazivanje);
 
-            List<AutobusnaLinija> filtriraneLinije = sveLinije.Where(linija =>
-                linija.MjestoPolaska.IndexOf(pretrazivanje, StringComparison.OrdinalIgnoreCase) != -1 ||
-                linija.MjestoDolaska.IndexOf(pretrazivanje, StringComparison.OrdinalIgnoreCase) != -1
-            ).ToList();
-
-
-            dgvPrikazZaposlenik.DataSource = filtriraneLinije;
+            if (rezultatiPretrage.Count == 0)
+            {
+                MessageBox.Show("Nema rezultata za navedeni kriterij pretrage.", "Obavijest", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                dgvPrikazZaposlenik.DataSource = rezultatiPretrage;
+            }
         }
     }
 }

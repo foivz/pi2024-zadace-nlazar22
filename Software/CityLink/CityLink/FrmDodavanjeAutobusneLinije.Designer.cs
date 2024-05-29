@@ -42,6 +42,7 @@
             this.txtVrijemeDolaska = new System.Windows.Forms.TextBox();
             this.txtBrojStanica = new System.Windows.Forms.TextBox();
             this.btnDodaj = new System.Windows.Forms.Button();
+            this.btnOdustani = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -152,7 +153,7 @@
             // 
             // btnDodaj
             // 
-            this.btnDodaj.Location = new System.Drawing.Point(191, 311);
+            this.btnDodaj.Location = new System.Drawing.Point(123, 314);
             this.btnDodaj.Name = "btnDodaj";
             this.btnDodaj.Size = new System.Drawing.Size(105, 35);
             this.btnDodaj.TabIndex = 19;
@@ -160,11 +161,22 @@
             this.btnDodaj.UseVisualStyleBackColor = true;
             this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
             // 
+            // btnOdustani
+            // 
+            this.btnOdustani.Location = new System.Drawing.Point(249, 314);
+            this.btnOdustani.Name = "btnOdustani";
+            this.btnOdustani.Size = new System.Drawing.Size(105, 35);
+            this.btnOdustani.TabIndex = 20;
+            this.btnOdustani.Text = "Odustani";
+            this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
+            // 
             // FrmDodavanjeAutobusneLinije
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(474, 370);
+            this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.txtBrojStanica);
             this.Controls.Add(this.txtVrijemeDolaska);
@@ -206,5 +218,6 @@
         private System.Windows.Forms.TextBox txtVrijemeDolaska;
         private System.Windows.Forms.TextBox txtBrojStanica;
         private System.Windows.Forms.Button btnDodaj;
+        private System.Windows.Forms.Button btnOdustani;
     }
 }
