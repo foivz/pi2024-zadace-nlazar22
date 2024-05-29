@@ -30,7 +30,7 @@
         {
             this.label3 = new System.Windows.Forms.Label();
             this.lblLinijaID = new System.Windows.Forms.Label();
-            this.txtLinijaID = new System.Windows.Forms.TextBox();
+            this.txtLinijaId = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -53,12 +53,12 @@
             this.lblLinijaID.TabIndex = 6;
             this.lblLinijaID.Text = "Linija ID:";
             // 
-            // txtLinijaID
+            // txtLinijaId
             // 
-            this.txtLinijaID.Location = new System.Drawing.Point(154, 91);
-            this.txtLinijaID.Name = "txtLinijaID";
-            this.txtLinijaID.Size = new System.Drawing.Size(47, 20);
-            this.txtLinijaID.TabIndex = 7;
+            this.txtLinijaId.Location = new System.Drawing.Point(154, 91);
+            this.txtLinijaId.Name = "txtLinijaId";
+            this.txtLinijaId.Size = new System.Drawing.Size(47, 20);
+            this.txtLinijaId.TabIndex = 7;
             // 
             // btnDelete
             // 
@@ -68,6 +68,7 @@
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Obriši";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // FrmBrisanjeAutobusneLinije
             // 
@@ -75,7 +76,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(297, 245);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.txtLinijaID);
+            this.Controls.Add(this.txtLinijaId);
             this.Controls.Add(this.lblLinijaID);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -93,7 +94,7 @@
 
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblLinijaID;
-        private System.Windows.Forms.TextBox txtLinijaID;
+        private System.Windows.Forms.TextBox txtLinijaId;
         private System.Windows.Forms.Button btnDelete;
     }
 }

@@ -36,6 +36,38 @@ namespace CityLink.Repozitoriji
             DB.CloseConnection();
         }
 
+        public static bool PostojiAutobusnaLinijaSaId(int linijaId)
+        {
+            string connectionString = "Server=31.147.206.65;Database=PI2324_nlazar22_DB; User Id=PI2324_nlazar22_User;Password=p0:]s{jL";
+            string sql = "SELECT COUNT(*) FROM AutobusneLinije WHERE LinijaId = @LinijaId";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@LinijaId", linijaId);
+                    int count = (int)command.ExecuteScalar();
+                    return count > 0;
+                }
+            }
+        }
+
+        public static void ObrisiAutobusnuLiniju(int linijaId)
+        {
+            if (!PostojiAutobusnaLinijaSaId(linijaId))
+            {
+                MessageBox.Show("Autobusna linija s navedenim ID-om ne postoji.", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string sql = $"DELETE FROM AutobusneLinije WHERE LinijaId = {linijaId}";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+
+            MessageBox.Show("Autobusna linija je uspješno obrisana.", "Brisanje linije", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
 
         private static AutobusnaLinija CreateObject(SqlDataReader reader)
         {

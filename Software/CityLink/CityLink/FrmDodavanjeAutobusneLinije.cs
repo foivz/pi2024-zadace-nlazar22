@@ -14,9 +14,13 @@ namespace CityLink
 {
     public partial class FrmDodavanjeAutobusneLinije : Form
     {
-        public FrmDodavanjeAutobusneLinije()
+
+        private FrmAutobusneLinijeZaposlenik _frmAutobusneLinijeZaposlenik;
+
+        public FrmDodavanjeAutobusneLinije(FrmAutobusneLinijeZaposlenik frmAutobusneLinijeZaposlenik)
         {
             InitializeComponent();
+            _frmAutobusneLinijeZaposlenik = frmAutobusneLinijeZaposlenik;
         }
 
         private void btnDodaj_Click(object sender, EventArgs e)
@@ -46,6 +50,13 @@ namespace CityLink
             {
                 MessageBox.Show("Neispravan format za Broj Stanica!", "Pogreška",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; 
+            }
+
+            if (AutobusneLinijeRepozitorij.PostojiAutobusnaLinijaSaId(linijaId))
+            {
+                MessageBox.Show("Linija sa istim ID već postoji!", "Pogreška",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -56,6 +67,10 @@ namespace CityLink
 
             AutobusnaLinija novaLinija = new AutobusnaLinija(linijaId, mjestoPolaska, mjestoDolaska, vrijemePolaska, vrijemeDolaska, brojStanica);
             AutobusneLinijeRepozitorij.DodajAutobusnuLiniju(novaLinija);
+
+            _frmAutobusneLinijeZaposlenik.ShowAutobusneLinije();
+
+            Close();
         }
 
     }

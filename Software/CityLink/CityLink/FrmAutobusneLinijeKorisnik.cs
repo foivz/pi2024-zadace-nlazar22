@@ -29,7 +29,7 @@ namespace CityLink
             
         }
 
-        private void ShowAutobusneLinije()
+        public void ShowAutobusneLinije()
         {
             List<AutobusnaLinija> autobusneLinije = AutobusneLinijeRepozitorij.GetAutobusneLinije();
             dgvPrikazKorisnik.DataSource = autobusneLinije;

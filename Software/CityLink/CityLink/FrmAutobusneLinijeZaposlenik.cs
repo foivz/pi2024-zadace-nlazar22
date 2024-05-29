@@ -22,13 +22,13 @@ namespace CityLink
 
         private void btnDodajAutobusnuLiniju_Click(object sender, EventArgs e)
         {
-            FrmDodavanjeAutobusneLinije frmDodavanjeAutobusneLinije = new FrmDodavanjeAutobusneLinije();
+            FrmDodavanjeAutobusneLinije frmDodavanjeAutobusneLinije = new FrmDodavanjeAutobusneLinije(this);
             frmDodavanjeAutobusneLinije.ShowDialog();
         }
 
         private void btnObrisiAutobusnuLiniju_Click(object sender, EventArgs e)
         {
-            FrmBrisanjeAutobusneLinije frmBrisanjeAutobusneLinije = new FrmBrisanjeAutobusneLinije();
+            FrmBrisanjeAutobusneLinije frmBrisanjeAutobusneLinije = new FrmBrisanjeAutobusneLinije(this);
             frmBrisanjeAutobusneLinije.ShowDialog();
         }
 
@@ -47,7 +47,7 @@ namespace CityLink
             Close();
         }
 
-        private void ShowAutobusneLinije()
+        public void ShowAutobusneLinije()
         {
             List<AutobusnaLinija> autobusneLinije = AutobusneLinijeRepozitorij.GetAutobusneLinije();
             dgvPrikazZaposlenik.DataSource = autobusneLinije;
