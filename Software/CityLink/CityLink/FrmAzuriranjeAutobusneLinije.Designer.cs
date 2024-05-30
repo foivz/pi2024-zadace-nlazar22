@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAzuriranjeAutobusneLinije));
             this.label3 = new System.Windows.Forms.Label();
             this.btnAzuriraj = new System.Windows.Forms.Button();
             this.txtBrojStanica = new System.Windows.Forms.TextBox();
@@ -192,6 +193,7 @@
             this.Controls.Add(this.lblLinijaID);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmAzuriranjeAutobusneLinije";

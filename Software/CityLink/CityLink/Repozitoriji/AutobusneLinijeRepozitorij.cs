@@ -74,6 +74,7 @@ namespace CityLink.Repozitoriji
         public static List<AutobusnaLinija> PretraziAutobusneLinije(string pretrazivanje)
         {
             List<AutobusnaLinija> linije = new List<AutobusnaLinija>();
+            pretrazivanje = pretrazivanje.ToLower();
             string sql = $"SELECT * FROM AutobusneLinije WHERE MjestoPolaska LIKE '%{pretrazivanje}%' OR MjestoDolaska LIKE '%{pretrazivanje}%'";
 
             DB.OpenConnection();

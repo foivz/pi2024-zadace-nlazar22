@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAutobusneLinijeKorisnik));
             this.label3 = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -132,6 +133,7 @@
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.label3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmAutobusneLinijeKorisnik";
