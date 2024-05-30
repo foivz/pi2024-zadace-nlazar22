@@ -33,6 +33,12 @@ namespace CityLink
                 return;
             }
 
+            if (!AutobusneLinijeRepozitorij.PostojiAutobusnaLinijaSaId(linijaId))
+            {
+                MessageBox.Show("Autobusna linija s navedenim ID-om ne postoji.", "Pogreška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             AutobusneLinijeRepozitorij.ObrisiAutobusnuLiniju(linijaId);
 
             _frmAutobusneLinijeZaposlenik.ShowAutobusneLinije();

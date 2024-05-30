@@ -43,6 +43,7 @@
             this.autobusneLinijeTableAdapter = new CityLink.PI2324_nlazar22_DBDataSetTableAdapters.AutobusneLinijeTableAdapter();
             this.dgvPrikazZaposlenik = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnPrikazi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.autobusneLinijeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pI2324_nlazar22_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrikazZaposlenik)).BeginInit();
@@ -159,11 +160,22 @@
             this.panel1.Size = new System.Drawing.Size(810, 56);
             this.panel1.TabIndex = 18;
             // 
+            // btnPrikazi
+            // 
+            this.btnPrikazi.Location = new System.Drawing.Point(526, 63);
+            this.btnPrikazi.Name = "btnPrikazi";
+            this.btnPrikazi.Size = new System.Drawing.Size(93, 32);
+            this.btnPrikazi.TabIndex = 19;
+            this.btnPrikazi.Text = "Prikaži sve linije";
+            this.btnPrikazi.UseVisualStyleBackColor = true;
+            this.btnPrikazi.Click += new System.EventHandler(this.btnPrikazi_Click);
+            // 
             // FrmAutobusneLinijeZaposlenik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnPrikazi);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvPrikazZaposlenik);
             this.Controls.Add(this.btnSearch);
@@ -206,5 +218,6 @@
         private PI2324_nlazar22_DBDataSetTableAdapters.AutobusneLinijeTableAdapter autobusneLinijeTableAdapter;
         private System.Windows.Forms.DataGridView dgvPrikazZaposlenik;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnPrikazi;
     }
 }

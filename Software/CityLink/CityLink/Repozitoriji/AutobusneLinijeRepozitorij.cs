@@ -45,18 +45,12 @@ namespace CityLink.Repozitoriji
 
         public static void ObrisiAutobusnuLiniju(int linijaId)
         {
-            if (!PostojiAutobusnaLinijaSaId(linijaId))
-            {
-                MessageBox.Show("Autobusna linija s navedenim ID-om ne postoji.", "Pogreška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+                string sql = $"DELETE FROM AutobusneLinije WHERE LinijaId = {linijaId}";
+                DB.OpenConnection();
+                DB.ExecuteCommand(sql);
+                DB.CloseConnection();
 
-            string sql = $"DELETE FROM AutobusneLinije WHERE LinijaId = {linijaId}";
-            DB.OpenConnection();
-            DB.ExecuteCommand(sql);
-            DB.CloseConnection();
-
-            MessageBox.Show("Autobusna linija je uspješno obrisana.", "Brisanje linije", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Autobusna linija je uspješno obrisana.", "Brisanje linije", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public static void AzurirajAutobusnuLiniju(AutobusnaLinija linija)

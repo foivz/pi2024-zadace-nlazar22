@@ -69,5 +69,9 @@ namespace CityLink
             }
         }
 
+        private void btnPrikazi_Click(object sender, EventArgs e)
+        {
+            ShowAutobusneLinije();
+        }
     }
 }

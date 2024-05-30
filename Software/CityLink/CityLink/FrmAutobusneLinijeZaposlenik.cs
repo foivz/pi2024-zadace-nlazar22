@@ -85,5 +85,10 @@ namespace CityLink
                 dgvPrikazZaposlenik.DataSource = rezultatiPretrage;
             }
         }
+
+        private void btnPrikazi_Click(object sender, EventArgs e)
+        {
+            ShowAutobusneLinije();
+        }
     }
 }
