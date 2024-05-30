@@ -34,13 +34,15 @@
             this.txtLinijaId = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnOdustani = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(88, 9);
+            this.label3.Location = new System.Drawing.Point(85, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 33);
             this.label3.TabIndex = 5;
@@ -82,16 +84,25 @@
             this.btnOdustani.UseVisualStyleBackColor = true;
             this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(297, 52);
+            this.panel1.TabIndex = 10;
+            // 
             // FrmBrisanjeAutobusneLinije
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(297, 245);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.txtLinijaId);
             this.Controls.Add(this.lblLinijaID);
-            this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -99,6 +110,8 @@
             this.Name = "FrmBrisanjeAutobusneLinije";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Brisanje autobusne linije";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,5 +124,6 @@
         private System.Windows.Forms.TextBox txtLinijaId;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnOdustani;
+        private System.Windows.Forms.Panel panel1;
     }
 }

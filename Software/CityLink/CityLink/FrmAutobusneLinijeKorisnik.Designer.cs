@@ -40,10 +40,12 @@
             this.autobusneLinijeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.autobusneLinijeTableAdapter = new CityLink.PI2324_nlazar22_DBDataSetTableAdapters.AutobusneLinijeTableAdapter();
             this.dgvPrikazKorisnik = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pI2324_nlazar22_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pI2324nlazar22DBDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.autobusneLinijeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrikazKorisnik)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
@@ -122,17 +124,26 @@
             this.dgvPrikazKorisnik.Size = new System.Drawing.Size(644, 265);
             this.dgvPrikazKorisnik.TabIndex = 16;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(-5, -2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(810, 56);
+            this.panel1.TabIndex = 17;
+            // 
             // FrmAutobusneLinijeKorisnik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvPrikazKorisnik);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.label3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -144,6 +155,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pI2324nlazar22DBDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.autobusneLinijeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrikazKorisnik)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,5 +174,6 @@
         private System.Windows.Forms.BindingSource autobusneLinijeBindingSource;
         private PI2324_nlazar22_DBDataSetTableAdapters.AutobusneLinijeTableAdapter autobusneLinijeTableAdapter;
         private System.Windows.Forms.DataGridView dgvPrikazKorisnik;
+        private System.Windows.Forms.Panel panel1;
     }
 }

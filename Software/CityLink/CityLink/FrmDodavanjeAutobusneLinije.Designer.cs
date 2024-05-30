@@ -44,13 +44,15 @@
             this.txtBrojStanica = new System.Windows.Forms.TextBox();
             this.btnDodaj = new System.Windows.Forms.Button();
             this.btnOdustani = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(178, 9);
+            this.label3.Location = new System.Drawing.Point(177, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 33);
             this.label3.TabIndex = 6;
@@ -172,11 +174,21 @@
             this.btnOdustani.UseVisualStyleBackColor = true;
             this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(-1, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(475, 49);
+            this.panel1.TabIndex = 21;
+            // 
             // FrmDodavanjeAutobusneLinije
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(474, 370);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.txtBrojStanica);
@@ -191,7 +203,6 @@
             this.Controls.Add(this.lblMjestoDolaska);
             this.Controls.Add(this.lblMjestoPolaska);
             this.Controls.Add(this.lblLinijaID);
-            this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -199,6 +210,8 @@
             this.Name = "FrmDodavanjeAutobusneLinije";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodavanje autobusne linije";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,5 +234,6 @@
         private System.Windows.Forms.TextBox txtBrojStanica;
         private System.Windows.Forms.Button btnDodaj;
         private System.Windows.Forms.Button btnOdustani;
+        private System.Windows.Forms.Panel panel1;
     }
 }
