@@ -47,17 +47,12 @@ namespace CityLink
             ShowAutobusneLinije();
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void btnSearch_Click_1(object sender, EventArgs e)
         {
-            string pretrazivanje = txtSearch.Text.Trim();
+            string mjestoPolaska = txtSearch.Text.Trim();
+            string mjestoDolaska = txtSearch2.Text.Trim();
 
-            if (string.IsNullOrEmpty(pretrazivanje))
-            {
-                ShowAutobusneLinije();
-                return;
-            }
-
-            List<AutobusnaLinija> rezultatiPretrage = AutobusneLinijeRepozitorij.PretraziAutobusneLinije(pretrazivanje);
+            List<AutobusnaLinija> rezultatiPretrage = AutobusneLinijeRepozitorij.PretraziAutobusneLinije(mjestoPolaska, mjestoDolaska);
 
             if (rezultatiPretrage.Count == 0)
             {
@@ -69,7 +64,7 @@ namespace CityLink
             }
         }
 
-        private void btnPrikazi_Click(object sender, EventArgs e)
+        private void btnPrikazi_Click_1(object sender, EventArgs e)
         {
             ShowAutobusneLinije();
         }

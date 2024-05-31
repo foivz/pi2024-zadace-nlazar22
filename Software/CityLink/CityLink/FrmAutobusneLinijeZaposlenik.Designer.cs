@@ -44,6 +44,8 @@
             this.dgvPrikazZaposlenik = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPrikazi = new System.Windows.Forms.Button();
+            this.lblSearch2 = new System.Windows.Forms.Label();
+            this.txtSearch2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.autobusneLinijeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pI2324_nlazar22_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrikazZaposlenik)).BeginInit();
@@ -102,23 +104,25 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(194, 68);
+            this.txtSearch.Location = new System.Drawing.Point(102, 68);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(180, 20);
             this.txtSearch.TabIndex = 10;
+//            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(67, 71);
+            this.lblSearch.Location = new System.Drawing.Point(15, 71);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(121, 13);
+            this.lblSearch.Size = new System.Drawing.Size(81, 13);
             this.lblSearch.TabIndex = 11;
-            this.lblSearch.Text = "Pretraži autobusnu liniju:";
+            this.lblSearch.Text = "Mjesto polaska:";
+ //           this.lblSearch.Click += new System.EventHandler(this.lblSearch_Click);
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(402, 63);
+            this.btnSearch.Location = new System.Drawing.Point(590, 63);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(93, 32);
             this.btnSearch.TabIndex = 12;
@@ -162,7 +166,7 @@
             // 
             // btnPrikazi
             // 
-            this.btnPrikazi.Location = new System.Drawing.Point(526, 63);
+            this.btnPrikazi.Location = new System.Drawing.Point(694, 63);
             this.btnPrikazi.Name = "btnPrikazi";
             this.btnPrikazi.Size = new System.Drawing.Size(93, 32);
             this.btnPrikazi.TabIndex = 19;
@@ -170,11 +174,30 @@
             this.btnPrikazi.UseVisualStyleBackColor = true;
             this.btnPrikazi.Click += new System.EventHandler(this.btnPrikazi_Click);
             // 
+            // lblSearch2
+            // 
+            this.lblSearch2.AutoSize = true;
+            this.lblSearch2.Location = new System.Drawing.Point(305, 72);
+            this.lblSearch2.Name = "lblSearch2";
+            this.lblSearch2.Size = new System.Drawing.Size(81, 13);
+            this.lblSearch2.TabIndex = 21;
+            this.lblSearch2.Text = "Mjesto dolaska:";
+ //           this.lblSearch2.Click += new System.EventHandler(this.lblSearch2_Click);
+            // 
+            // txtSearch2
+            // 
+            this.txtSearch2.Location = new System.Drawing.Point(391, 69);
+            this.txtSearch2.Name = "txtSearch2";
+            this.txtSearch2.Size = new System.Drawing.Size(180, 20);
+            this.txtSearch2.TabIndex = 20;
+            // 
             // FrmAutobusneLinijeZaposlenik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblSearch2);
+            this.Controls.Add(this.txtSearch2);
             this.Controls.Add(this.btnPrikazi);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvPrikazZaposlenik);
@@ -219,5 +242,7 @@
         private System.Windows.Forms.DataGridView dgvPrikazZaposlenik;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnPrikazi;
+        private System.Windows.Forms.Label lblSearch2;
+        private System.Windows.Forms.TextBox txtSearch2;
     }
 }

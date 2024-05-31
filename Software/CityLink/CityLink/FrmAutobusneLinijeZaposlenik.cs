@@ -66,15 +66,10 @@ namespace CityLink
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string pretrazivanje = txtSearch.Text.Trim();
+            string mjestoPolaska = txtSearch.Text.Trim();
+            string mjestoDolaska = txtSearch2.Text.Trim();
 
-            if (string.IsNullOrEmpty(pretrazivanje))
-            {
-                ShowAutobusneLinije();
-                return;
-            }
-
-            List<AutobusnaLinija> rezultatiPretrage = AutobusneLinijeRepozitorij.PretraziAutobusneLinije(pretrazivanje);
+            List<AutobusnaLinija> rezultatiPretrage = AutobusneLinijeRepozitorij.PretraziAutobusneLinije(mjestoPolaska, mjestoDolaska);
 
             if (rezultatiPretrage.Count == 0)
             {

@@ -65,11 +65,22 @@ namespace CityLink.Repozitoriji
             MessageBox.Show("Autobusna linija je uspješno ažurirana.", "Ažuriranje linije", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public static List<AutobusnaLinija> PretraziAutobusneLinije(string pretrazivanje)
+        public static List<AutobusnaLinija> PretraziAutobusneLinije(string mjestoPolaska, string mjestoDolaska)
         {
             List<AutobusnaLinija> linije = new List<AutobusnaLinija>();
-            pretrazivanje = pretrazivanje.ToLower();
-            string sql = $"SELECT * FROM AutobusneLinije WHERE MjestoPolaska LIKE '%{pretrazivanje}%' OR MjestoDolaska LIKE '%{pretrazivanje}%'";
+
+            mjestoPolaska = mjestoPolaska.ToLower();
+            mjestoDolaska = mjestoDolaska.ToLower();
+
+            string sql = "SELECT * FROM AutobusneLinije WHERE 1=1";
+            if (!string.IsNullOrEmpty(mjestoPolaska))
+            {
+                sql += $" AND LOWER(MjestoPolaska) LIKE '%{mjestoPolaska}%'";
+            }
+            if (!string.IsNullOrEmpty(mjestoDolaska))
+            {
+                sql += $" AND LOWER(MjestoDolaska) LIKE '%{mjestoDolaska}%'";
+            }
 
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
@@ -80,6 +91,7 @@ namespace CityLink.Repozitoriji
             }
             reader.Close();
             DB.CloseConnection();
+
             return linije;
         }
 
