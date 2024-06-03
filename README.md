@@ -7,7 +7,7 @@ CityLink - Unapređenje autobusnog prijevoza u Varaždinu kroz digitalnu transfo
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
 Nikola Lazar  | nlazar22@foi.hr     | 0016161213 | nlazar22
-
+<br>
 <u>Podaci za prijavu</u> <br>
 ##
 Zaposlenik: <br>
