@@ -8,6 +8,9 @@ Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
 Nikola Lazar  | nlazar22@foi.hr     | 0016161213 | nlazar22
 
+Podaci za prijavu:
+Zaposlenik - Korisničko ime: zaposlenik Lozinka: test1
+Korisnik - Korisničko ime: korisnik Lozinka: test2
 
 ## Opis domene
 Izrada aplikacije "CityLink" je ključni korak za unapređenje kvalitete usluge autobusnog prijevoza u Varaždinu. Autobusi svakodnevno prevoze putnike po Varaždinu i okolici, osiguravajući da stignu na svoja odredišta na vrijeme, bilo da se radi o poslu, školi ili drugim obvezama. Kako bi se održala visoka razinu usluge, prelazi se na digitalno vođenje poslovnih procesa, koristeći tu aplikaciju. Ova aplikacija će omogućiti jednostavnije i efikasnije praćenje i upravljanje svim aspektima autobusnog prijevoza u Varaždinu.
