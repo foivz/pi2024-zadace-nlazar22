@@ -9,7 +9,7 @@ Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 Nikola Lazar  | nlazar22@foi.hr     | 0016161213 | nlazar22
 
 Podaci za prijavu:
-Zaposlenik - Korisničko ime: zaposlenik Lozinka: test1
+Zaposlenik - Korisničko ime: zaposlenik Lozinka: test1 <br>
 Korisnik - Korisničko ime: korisnik Lozinka: test2
 
 ## Opis domene
